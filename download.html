@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>ツールダウンロード</title>
+  <title>ツールダウンロード / Tool Downloads</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
   <style>
@@ -15,19 +15,21 @@
     h1 {
       text-align: center;
       color: #2c3e50;
+      font-size: 2.2em;
+      margin-bottom: 40px;
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
       max-width: 1000px;
       margin: 0 auto;
     }
     .card {
       background: white;
       border-radius: 15px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 24px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -35,18 +37,27 @@
     .card h2 {
       margin-top: 0;
       color: #2980b9;
+      font-size: 1.3em;
     }
     .card p {
       flex-grow: 1;
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+    .card p.en {
+      color: #555;
+      font-size: 0.95em;
+      margin-top: 8px;
     }
     .card a {
       display: inline-block;
-      margin-top: 10px;
-      padding: 10px 15px;
+      margin-top: auto;
+      padding: 10px 16px;
       background-color: #3498db;
       color: white;
       text-decoration: none;
       border-radius: 8px;
+      font-weight: bold;
       transition: background-color 0.3s;
     }
     .card a:hover {
@@ -56,22 +67,42 @@
 </head>
 <body>
 
-  <h1>ツール＆資料ダウンロード</h1>
+  <h1>ツール＆資料ダウンロード / Tool & Document Downloads</h1>
 
   <div class="grid">
     <div class="card">
-      <h2>Outlook画像抽出ツール</h2>
-      <p>Outlookの.msgファイルから画像添付を抽出し、Excelに自動で貼り付けるVBScriptツールです。</p>
-      <a href="tools/extract_images_to_excel.vbs" download>▶ ダウンロード</a>
+      <h2>Outlook画像抽出ツール / Outlook Image Extractor</h2>
+      <p>
+        Outlookの.msgファイルから画像添付を抽出し、Excelに自動で貼り付けるVBScriptツールです。
+      </p>
+      <p class="en">
+        A VBScript tool that extracts image attachments from Outlook .msg files and automatically inserts them into Excel with fixed height and preserved aspect ratio.
+      </p>
+      <a href="tools/extract_images_to_excel.vbs" download>▶ ダウンロード / Download</a>
     </div>
 
     <div class="card">
-      <h2>使い方マニュアル（PDF）</h2>
-      <p>ツールの使い方をまとめた日本語マニュアルです。手順や注意点を図解付きで解説しています。</p>
-      <a href="tools/tool_manual_ja.pdf" target="_blank">▶ マニュアルを開く</a>
+      <h2>使い方マニュアル（PDF） / User Manual (PDF)</h2>
+      <p>
+        ツールの使い方をまとめた日本語マニュアルです。手順や注意点を図解付きで解説しています。
+      </p>
+      <p class="en">
+        A Japanese user manual explaining how to use the tool, including step-by-step instructions and visual guides.
+      </p>
+      <a href="tools/tool_manual_ja.pdf" target="_blank">▶ マニュアルを開く / View Manual</a>
     </div>
 
-    <!-- ここにさらにカードを追加できます -->
+    <!-- 追加カードの例 -->
+    <div class="card">
+      <h2>英語版マニュアル（PDF） / English Manual (PDF)</h2>
+      <p>
+        英語で書かれた使い方マニュアルです。英語話者向けに手順と注意点を解説しています。
+      </p>
+      <p class="en">
+        English version of the user manual for the Outlook image extraction tool. Includes clear instructions and usage tips.
+      </p>
+      <a href="tools/tool_manual_en.pdf" target="_blank">▶ マニュアルを開く / View Manual</a>
+    </div>
   </div>
 
 </body>
